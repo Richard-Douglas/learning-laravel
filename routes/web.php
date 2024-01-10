@@ -21,6 +21,8 @@ Route::get('/', function () {
 
 Route::get('/contato', [SiteController::class, 'contact']);
 
+Route::put('/supports/{id}', [SupportController::class, 'update'])->name('supports.update');
+Route::get('/supports/{id}/edit', [SupportController::class, 'edit'])->name('supports.edit');
 Route::get('/supports/create', [SupportController::class, 'create'])->name('supports.create');
 Route::get('/supports/{id}', [SupportController::class, 'show'])->name('supports.show');
 Route::post('/supports', [SupportController::class, 'store'])->name('supports.store');
